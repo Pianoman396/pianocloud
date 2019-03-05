@@ -1,0 +1,63 @@
+
+// Borders
+
+.no__border,
+.no__border:hover,
+.no__border:active,
+.no__border:visited,
+.no__border:focus,
+.button.no__border a,
+.button.no__border a:hover,
+.button.no__border a:active,
+.button.no__border a:visited,
+.button.no__border a:focus {
+	border: none;
+}
+
+
+.no__border-i,
+.no__border-i:hover,
+.no__border-i:active,
+.no__border-i:visited,
+.no__border-i:focus,
+.button.no__border-i a,
+.button.no__border-i a:hover,
+.button.no__border-i a:active,
+.button.no__border-i a:visited,
+.button.no__border-i a:focus {
+	border: none !important;
+}
+
+$i: 1;
+@while $i <= 10 {
+  .#{'border-top-'}#{$i} {
+    border-top: #{$i}#{'px'} solid;
+  }
+  .#{'border-right-'}#{$i} {
+    border-right: #{$i}#{'px'} solid;
+  }
+  .#{'border-bottom-'}#{$i} {
+    border-bottom: #{$i}#{'px'} solid;
+  }
+  .#{'border-left-'}#{$i} {
+    border-left: #{$i}#{'px'} solid;
+  }
+  $i: $i + 1;
+}
+
+$i: 1;
+@while $i <= 10 {
+  .#{'border-top-'}#{$i}#{$global-suffix-important} {
+    border-top: #{$i}#{'px'} solid !important;
+  }
+  .#{'border-right-'}#{$i}#{$global-suffix-important} {
+    border-right: #{$i}#{'px'} solid !important;
+  }
+  .#{'border-bottom-'}#{$i}#{$global-suffix-important} {
+    border-bottom: #{$i}#{'px'} solid !important;
+  }
+  .#{'border-left-'}#{$i}#{$global-suffix-important} {
+    border-left: #{$i}#{'px'} solid !important;
+  }
+  $i: $i + 1;
+}

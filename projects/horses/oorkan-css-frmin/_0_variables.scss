@@ -1,0 +1,22 @@
+/*
+========================================
+	Variables
+========================================
+*/
+
+// prefixes and suffixes
+
+$global-prefix-display: 'display__';
+$global-prefix-font: 'font__';
+$global-prefix-formatting: 'text__';
+$global-prefix-no: 'no__';
+$global-prefix-z-index: 'zindex__';
+$global-prefix-opacity: 'opacity__';
+$global-suffix-important: '-i';
+$global-suffix-zero: '-0';
+
+
+$transition-type-opacity: opacity;
+$transition-function-type: linear;
+$transition-time: 0.2s;
+$transition-delay: 0s;

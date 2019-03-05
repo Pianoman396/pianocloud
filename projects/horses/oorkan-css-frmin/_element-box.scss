@@ -1,0 +1,117 @@
+// Margins
+
+$w3margins: margin, margin-top, margin-right, margin-bottom, margin-left;
+
+//use class="no__margin-top-i" syntax
+
+@each $w3margin in $w3margins {
+	.#{$global-prefix-no}#{$w3margin}#{$global-suffix-important} {
+		#{$w3margin}: 0px !important;
+	}
+}
+//use class="no__margin-top" syntax
+
+@each $w3margin in $w3margins {
+	.#{$global-prefix-no}#{$w3margin} {
+		#{$w3margin}: 0px;
+	}
+}
+.margin-zauto {
+	margin: 0 auto;
+}
+.margin-zauto-i {
+	margin: 0 auto !important;
+}
+
+
+// Paddings
+
+//use class="no__padding-top-i" syntax
+
+$w3paddings: padding, padding-top, padding-right, padding-bottom, padding-left;
+
+@each $w3padding in $w3paddings {
+	.#{$global-prefix-no}#{$w3padding}#{$global-suffix-important} {
+		#{$w3padding}: 0px !important;
+	}
+}
+
+//use class="no__padding-top" syntax
+@each $w3padding in $w3paddings {
+	.#{$global-prefix-no}#{$w3padding} {
+		#{$w3padding}: 0px;
+	}
+}
+
+// Widths
+
+.entire {
+	width: 100%;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.full__width-i {
+	width: 100% !important;
+}
+
+.no__width-i {
+	width: 0px !important;
+}
+
+// use class="width-i" syntax
+
+.width {
+	$i: 5;
+	@while $i <= 95 {
+  		&#{'-#{$i}'} {
+    		width: #{'#{$i}%'};
+  		}
+  		$i: $i + 5;
+	}
+
+	&#{'-third'} {
+		width: 33.33333333%;
+	}
+}
+
+// Heights
+
+
+.full__height-i {
+	height: 100% !important;
+}
+.full__height {
+	height: 100%;
+}
+.no__height-i {
+	height: 0px !important;
+}
+.no__height {
+	height: 0px;
+}
+
+.half__height-i {
+	max-height: 50% !important;
+	min-height: 50% !important;
+}
+.half__height {
+	max-height: 50%;
+	min-height: 50%;
+}
+
+// Hide
+
+.conceal {
+	display: none;
+}
+
+// Box Containers
+
+.border-box {
+	@include box-sizing(border-box);
+}
+
+

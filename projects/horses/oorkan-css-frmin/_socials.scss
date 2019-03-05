@@ -1,0 +1,29 @@
+// Social Icons
+
+.fa {
+	&.fa__onhover {
+		&:hover {
+			&.fa-twitter {
+				color: #55acee;
+			}
+			&.fa-facebook {
+				color: #3b5998;
+			}
+			&.fa-linkedin {
+				color: #007bb5;
+			}
+			&.fa-instagram {
+				color: #bd32a5;
+			}
+			&.fa-youtube-play {
+				color: #bb0000;
+			}
+			&.fa-google-plus {
+				color: #db4437;
+			}
+			&.fa-rss {
+				color: #f26522;
+			}
+		}
+	}
+}

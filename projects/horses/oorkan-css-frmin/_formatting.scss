@@ -1,0 +1,59 @@
+// formatting
+
+// font_weights_letteral
+
+$w3font-weights-letteral: lighter,normal,bold,bolder;
+
+@each $w3font-weight-letteral in $w3font-weights-letteral {
+	.#{$global-prefix-formatting}#{$w3font-weight-letteral} {
+		font-weight: $w3font-weight-letteral;
+	}
+}
+
+
+// Font Weights
+// use class="font__200-i" syntax
+
+$i: 100;
+@while $i <= 900 {
+  .#{$global-prefix-font}#{$i}#{$global-suffix-important} {
+    font-weight: $i !important;
+  }
+  $i: $i + 100;
+}
+
+// use class="font__200" syntax
+
+$i: 100;
+@while $i <= 900 {
+  .#{$global-prefix-font}#{$i} {
+    font-weight: $i;
+  }
+  $i: $i + 100;
+}
+
+.font__bold-i {
+	font-weight: bold !important;
+}
+
+.font__bolder-i {
+	font-weight: bolder !important;
+}
+
+.font__normal-i {
+	font-weight: normal !important;
+}
+
+.font__bold {
+	font-weight: bold;
+}
+
+.font__bolder {
+	font-weight: bolder;
+}
+
+.font__normal {
+	font-weight: normal;
+}
+
+

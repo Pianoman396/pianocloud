@@ -1,0 +1,45 @@
+// Text Colors
+
+.text__white {
+	color: #fff;
+}
+
+.text__black {
+	color: #000;
+}
+
+.text__white-i {
+	color: #fff !important;
+}
+
+.text__black-i {
+	color: #000 !important;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+
+
+
+// text__align
+
+
+$aligns: left,right,center,justify;
+
+@each $align in $aligns {
+	.text-#{$align} {
+		text-align: $align;
+	}
+}
+
+// @each $w3text-align in $w3text-aligns {
+// 	.#{$global-prefix-formatting}#{$w3text-align}#{$global-suffix-important} {
+// 		text-align: $w3text-align !important;
+// 	}
+// }

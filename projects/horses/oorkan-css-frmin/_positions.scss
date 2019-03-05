@@ -1,0 +1,85 @@
+// Positions
+
+//use class="absolute-i" syntax
+
+$w3positions: absolute, relative, fixed, static;
+@each $w3position in $w3positions {
+	.#{$w3position}#{$global-suffix-important} {
+		position: #{$w3position} !important;
+	}
+}
+
+//use class="absolute" syntax
+
+@each $w3position in $w3positions {
+	.#{$w3position} {
+		position: #{$w3position};
+	}
+}
+
+//use class="left-0-i" syntax
+
+$w3positions-zero: top, right, bottom, left;
+@each $w3position-zero in $w3positions-zero {
+	.#{$w3position-zero}#{$global-suffix-zero}#{$global-suffix-important} {
+		#{$w3position-zero}: 0px !important;
+	}
+}
+
+//use class="left-0" syntax
+
+@each $w3position-zero in $w3positions-zero {
+	.#{$w3position-zero}#{$global-suffix-zero} {
+		#{$w3position-zero}: 0px;
+	}
+}
+// Alignments
+
+.va__middle-i {
+	vertical-align: middle !important;
+}
+
+.va__middle {
+	vertical-align: middle;
+}
+
+// Floats
+
+.no-float-i {
+	float: none !important;
+}
+
+.no-float {
+	float: none;
+}
+
+.clearfix {
+	&:after {
+		content: ' ';
+		display: table;
+		clear: both;
+	}
+}
+
+.fl-lt {
+	float: left;
+}
+
+.fl-rt {
+	float: right;
+}
+
+.clearfix:after {
+content: '';
+display: table;
+clear: both;
+}
+
+.bottom-fixed {
+	position: fixed;
+	bottom: 0px;
+}
+.top-fixed {
+	position: fixed;
+	top: 0px;
+}

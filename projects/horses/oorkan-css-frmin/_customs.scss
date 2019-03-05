@@ -1,0 +1,75 @@
+// Zooms
+
+.outer {
+  &.zoom {
+    .inner {
+      transform: scale(1);
+      @include transition($transition-time $transition-function-type $transition-delay);
+    }
+    &:hover {
+      .inner {
+        transform: scale(1.2);
+        @include transition($transition-time $transition-function-type $transition-delay);
+      }
+    }
+  }
+}
+
+
+
+// Tints
+
+.tint-dark {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+      display: block !important;
+      background-color: rgba(0,0,0,.5);
+      opacity: 0;
+      @include transition($transition-time $transition-function-type $transition-delay);
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      @include transition($transition-time $transition-function-type $transition-delay);
+    }
+  }
+}
+
+
+
+// Overlays
+
+
+.curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  display: none;
+
+  &.curtain-dark {
+    background-color: rgba(0,0,0,0.8);
+  }
+}
+
+
+.has-overlay:hover {
+  .overlay {
+    visibility: visible;
+    opacity: 1;
+    @include transition ($transition-type-opacity
+               $transition-time
+               $transition-function-type
+               $transition-delay);
+  }
+}
+

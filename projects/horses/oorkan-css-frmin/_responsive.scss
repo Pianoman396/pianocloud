@@ -1,0 +1,47 @@
+/* to be modified */
+
+
+// $mobile: 600px;
+// $tablet: 900px;
+// $medium: 1200px;
+// $desktop: 1800px;
+
+
+
+// @media screen and (min-width: $mobile) {
+// 	$i: 5;
+// 	@while $i <= 100 {
+//   		.#{$global-prefix-width}#{$i}#{'-tablet'} {
+//     	width: #{$i}#{'%'};
+//   	}
+//   	$i: $i + 5;
+// 	}
+// }
+
+// @media screen and (min-width: $tablet) {
+// 	$i: 5;
+// 	@while $i <= 100 {
+//   		.#{$global-prefix-width}#{$i}#{'-medium'} {
+//     	width: #{$i}#{'%'};
+//   	}
+//   	$i: $i + 5;
+// 	}
+// }
+// @media screen and (min-width: $medium) {
+// 	$i: 5;
+// 	@while $i <= 100 {
+//   		.#{$global-prefix-width}#{$i}#{'-desktop'} {
+//     	width: #{$i}#{'%'};
+//   	}
+//   	$i: $i + 5;
+// 	}
+// }
+// @media screen and (min-width: $desktop) {
+// 	$i: 5;
+// 	@while $i <= 100 {
+//   		.#{$global-prefix-width}#{$i}#{'-retina'} {
+//     	width: #{$i}#{'%'};
+//   	}
+//   	$i: $i + 5;
+// 	}
+// }

@@ -1,0 +1,47 @@
+// Backgrounds
+
+.bg__color-white-i {
+	background-color: white !important;
+}
+
+.bg__color-transparent-i {
+	background-color: transparent !important;
+}
+
+.bg__cover-i {
+	background-size: cover !important;
+}
+
+.bg__no-repeat-i {
+	background-repeat: no-repeat !important;
+}
+
+.bg__center-i {
+	background-position: center !important;
+}
+.bg__color-white {
+	background-color: white;
+}
+
+.bg__color-transparent {
+	background-color: transparent;
+}
+
+.bg__cover {
+	background-size: cover;
+}
+
+.bg__no-repeat {
+	background-repeat: no-repeat;
+}
+
+.bg__normalize {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.bg__center {
+	background-position: center;
+}
+

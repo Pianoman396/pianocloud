@@ -1,0 +1,87 @@
+// Visibility
+
+.hidden-i {
+	visibility: hidden !important;
+}
+
+.visible-i {
+	visibility: visible !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+
+
+
+// Overflow
+
+.o__hidden-i {
+	overflow: hidden !important;
+}
+
+.oy__hidden-i {
+	overflow-y: hidden !important;
+}
+
+.o__hidden {
+  overflow: hidden;
+}
+
+.oy__hidden {
+  overflow-y: hidden;
+}
+//ox add
+
+// Z-Index
+
+
+//use class = "z-index__5-i" syntax
+
+$i: 0;
+@while $i <= 9 {
+  .#{$global-prefix-z-index}#{$i}#{$global-suffix-important} {
+    z-index: #{$i} !important;
+  }
+  $i: $i + 1;
+}
+
+$i: 0;
+@while $i <= 9 {
+  .#{$global-prefix-z-index}#{$i} {
+    z-index: #{$i};
+  }
+  $i: $i + 1;
+}
+
+// Opacity
+
+//use class="opacity__7-i" syntax
+
+$i: 0;
+@while $i <= 1 {
+  .#{$global-prefix-opacity}#{$i*100}#{$global-suffix-important} {
+    opacity: #{$i} !important;
+    @include transition ($transition-type-opacity
+               $transition-time
+               $transition-function-type
+               $transition-delay);
+  }
+  $i: $i + 0.1;
+}
+$i: 0;
+@while $i <= 1 {
+  .#{$global-prefix-opacity}#{$i*100} {
+    opacity: #{$i};
+    @include transition ($transition-type-opacity
+               $transition-time
+               $transition-function-type
+               $transition-delay);
+  }
+  $i: $i + 0.1;
+}

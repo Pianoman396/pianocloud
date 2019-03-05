@@ -1,0 +1,66 @@
+// display_levels
+
+$global-prefix-display: 'display__';
+
+$w3display-levels: none, inline, block, inline-block, list-item, inline-table, table, table-cell, table-row;
+
+.table {
+	display: table;
+
+	&#{'-xpad'} {
+		@media (min-width: 768px) {
+			display: table;
+
+			& > .table-cell  {
+			  display: table-cell;
+			}
+		}
+	}
+
+	&#{'-cell'} {
+		display: table-cell;
+	}
+
+	&#{'-cell'}, &#{'-row'} {
+		&.centralize-y {
+			vertical-align: middle;
+		}
+	}
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+
+//use class="display__inline-block" syntax
+@each $w3display-level in $w3display-levels {
+	.#{$global-prefix-display}#{$w3display-level} {
+		display: #{$w3display-level};
+	}
+}
+
+//use class="display__inline-block-i" syntax
+@each $w3display-level in $w3display-levels {
+	.#{$global-prefix-display}#{$w3display-level}#{$global-suffix-important} {
+		display: #{$w3display-level} !important;
+	}
+}
+
+// exclusions, that require cross-browser compatibility
+
+@mixin flex() {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.#{$global-prefix-display}flex {
+	@include flex();
+}
