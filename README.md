@@ -1,0 +1,2 @@
+# Blueprint
+## Simple project blueprint 
