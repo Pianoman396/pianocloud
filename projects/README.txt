@@ -1,5 +1,5 @@
 ***  Simple Project Blueprint  ***
 
-For use just run project.sh width ARGUMENT into some folder where have needed files for copy 
+For use just run project.sh with ARGUMENT into some folder where have needed files for copy 
 
-Example :  chmod +x ./project.sh; ./project.sh ololo
+Example :  chmod +x ./project.sh; ./project.sh project
